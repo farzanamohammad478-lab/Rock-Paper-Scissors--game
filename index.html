@@ -46,6 +46,7 @@
     #computer{
         transform:scaleX(-1);
     }
+       @media (max-width: 600px){
     button{
         padding:20px;
         margin:10px;
@@ -54,6 +55,7 @@
         border-radius: 20px;
         box-shadow:  2px 2px 2px black;
     }
+       }
     button:hover{
         background-color:cyan;
     }
@@ -83,9 +85,12 @@
     #computer{
         font-size: 150px;
     }
+       #main{
+           background:linear-gradient(135deg,#2193b0,#6dd5ed);
    
    </style>
     <body>
+        <div id="main">
         <h1><u><big>Rock Paper scissors</big></u></h1>
         <div class="game">
             <div class="box">
@@ -170,7 +175,7 @@ document.getElementById("computer").innerHTML=hands[computerChoice];
                 location.reload();
                }
           }
-            
+        </div>
 
            
         </script>
