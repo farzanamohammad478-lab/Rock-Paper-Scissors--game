@@ -29,6 +29,12 @@
                }
        }
     body{
+        display:flex;
+        flex-wrap:wrap;
+        gap:10px;
+        margin:0;
+        padding:0;
+        justify-content:center;
          background:linear-gradient(135deg,#2193b0,#6dd5ed);
         text-align: center;
         font-family: Arial;
@@ -65,8 +71,10 @@
     }
     @media(max-width: 600px){
     button{
-        display:inline-block;
+        display:block;
         padding:20px;
+        width:80px;
+        max-width:250px;
         margin:10px auto;
         cursor:pointer;
         background:linear-gradient(135deg,#ff9a9e,#fad0c4);
@@ -80,7 +88,7 @@
     }
        
     button:hover{
-        background-color:;
+        background:linear-gradient(135deg,#2193b0,#6dd5ed);
     }
     .big{
         font-size: 50px;
@@ -113,10 +121,7 @@
            width:2000px;
            background:linear-gradient(135deg,#2193b0,#6dd5ed);
        }
-       h1,p,div{
-           max-width: 100%;
-           text-align:center;
-       }
+      
        
        html,body{
            margin:0;
@@ -127,8 +132,7 @@
        }
    </style>
     <body>
-        <h1>hello</h1>
-        <button>test</button>
+       
         <div id="main">
         <h1><u><big>Rock Paper scissors</big></u></h1>
         <div class="game">
