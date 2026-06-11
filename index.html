@@ -41,11 +41,12 @@
     .hand{
         font-size: 120px;
         line-height:1;
-        width:180px;
+        width:180%;
         height:180px;
         display:flex;
         justify-content: center;
         align-items: center;
+        max-width:1800px;
     }
     h2{
         color:white;
@@ -88,9 +89,10 @@
         color:black;
         background-color: yellow;
         height:120px;
-        width:200px;
+        width:200%;
         font-size: 20px;
         margin:20px;
+        max-width:2000px;
     }
     p{
         color: black;
@@ -106,7 +108,13 @@
            width:2000px;
            background:linear-gradient(135deg,#2193b0,#6dd5ed);
        }
-   
+       
+       html,body{
+           margin:0;
+           padding:0;
+           width:100%;
+           overflow-x:hidden;
+       }
    </style>
     <body>
         <div id="main">
