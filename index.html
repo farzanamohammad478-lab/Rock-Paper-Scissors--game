@@ -42,7 +42,7 @@
     .game{
         display:flex;
         justify-content:center;
-        gap:100px;
+        gap:20px;
         align-items: center;
          margin-top: 50px;
         background:linear-gradient(135deg,#ff9a9e,#fad0c4);
@@ -64,6 +64,10 @@
         text-align: center;
     }
     .box{
+        font-size :40px;
+        line-height:1;
+        display :flex;
+        justify-content:center;
         text-align: center;
     }
     
@@ -121,10 +125,7 @@
     #computer{
         font-size: 150px;
     }
-       #main{
-           width:2000px;
-           background:linear-gradient(135deg,#2193b0,#6dd5ed);
-       }
+       
       
        
        html,body{
@@ -137,7 +138,7 @@
    </style>
     <body>
        
-        <div id="main">
+        
         <h1><u><big>Rock Paper scissors</big></u></h1>
         <div class="game">
             <div class="box">
@@ -226,7 +227,7 @@ document.getElementById("computer").innerHTML=hands[computerChoice];
 
            
         </script>
-        </div>
+        
 
     </body>
 </html>
