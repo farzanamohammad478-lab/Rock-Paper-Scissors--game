@@ -7,11 +7,21 @@
     </head>
    <style>
      h1{
-        color:yellow;
+        color:black;
         font-weight: 100%;
-        
+         font-size:larger;
+        animation:pop 1s ease;
         text-align: center;
     }
+       @keyframes pop{
+           0%{
+               transform: scale(0);
+               opacity:0;
+           }
+           100%{
+               transform: scale(1);
+               opacity:1;
+               }
     body{
         background-color:black;
         color:white;
@@ -54,6 +64,7 @@
         background-color:white;
         border-radius: 20px;
         box-shadow:  2px 2px 2px black;
+        transition :all 0.3s ease;
     }
        }
     button:hover{
@@ -76,7 +87,7 @@
         margin:20px;
     }
     p{
-        color: yellow;
+        color: black;
         font-size: large;
     }
     #player{
