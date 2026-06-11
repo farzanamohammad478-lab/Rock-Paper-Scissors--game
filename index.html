@@ -1,0 +1,179 @@
+<!doctype html>
+<html>
+    <head>
+        <title>rock paper scissors</title>
+     <meta name="viewport"
+     content="width=device-width,initial-scale=1.0">
+    </head>
+   <style>
+     h1{
+        color:yellow;
+        font-weight: 100%;
+        
+        text-align: center;
+    }
+    body{
+        background-color: crimson;
+        color:white;
+        text-align: center;
+        font-family: Arial;
+    }
+    .game{
+        display:flex;
+        justify-content:center;
+        gap:100px;
+        align-items: center;
+         margin-top: 50px;
+    
+    }
+    .hand{
+        font-size: 120px;
+        line-height:1;
+        width:180px;
+        height:180px;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+    h2{
+        color:white;
+        text-align: center;
+    }
+    .box{
+        text-align: center;
+    }
+    
+    #computer{
+        transform:scaleX(-1);
+    }
+    button{
+        padding:20px;
+        margin:10px;
+        cursor:pointer;
+        background-color:white;
+        border-radius: 20px;
+        box-shadow:  2px 2px 2px black;
+    }
+    button:hover{
+        background-color:cyan;
+    }
+    .big{
+        font-size: 50px;
+        
+      
+    }
+    #again{
+        display:none;
+    }
+    .score{
+        color:black;
+        background-color: yellow;
+        height:120px;
+        width:200px;
+        font-size: 20px;
+        margin:20px;
+    }
+    p{
+        color: yellow;
+        font-size: large;
+    }
+    #player{
+        font-size: 150px;
+    }
+    #computer{
+        font-size: 150px;
+    }
+   
+   </style>
+    <body>
+        <h1><u><big>Rock Paper scissors</big></u></h1>
+        <div class="game">
+            <div class="box">
+                <h1>player</h1>
+            <h2 id="player">✊</h2>
+            
+                
+            </div>
+        <div class="box">
+            <h1>computer</h1>
+                <h2 id="computer">✊</h2>
+                
+                    
+                </div>
+            </div>
+        
+        <center>
+        <div class="score">
+            player Score:<span id="playerScore">0</span><br>
+            computer Score:<span id="computerScore">0</span><br>
+            Draw Score:<span id="drawScore">0</span>
+        </div>
+        </center>
+        <br>
+        <p id="result"><big>choose an weapon</big></p>
+        <button onclick="play('rock')">
+            <span class="big">✊</span>Rock
+        </button>
+        <button onclick="play('paper')">
+            <span class="big">🖐</span>paper
+        </button>
+        <button onclick="play('scissors')">
+            <span class="big">✌</span>scissors
+        </button>
+        <br>
+        <br>
+
+
+        <script>
+            const hands={
+                rock:"✊",
+                paper:"🖐",
+                scissors:"✌"
+            };
+            let playerScore=0;
+            let computerScore=0;
+            let drawScore=0;
+            let round=0;
+            function play(playerChoice){
+            
+            
+const choices=["rock","paper","scissors"];
+const computerChoice=choices[Math.floor(Math.random()*3)];
+document.getElementById("player").innerHTML=hands[playerChoice];
+document.getElementById("computer").innerHTML=hands[computerChoice];
+            
+   if(playerChoice===computerChoice){
+   drawScore++;
+ document.getElementById("drawScore").innerHTML= drawScore;
+ document.getElementById("result").innerHTML="Draw!";
+               
+     }
+     else if(
+(playerChoice=="rock" && computerChoice=="scissors")||
+ (playerChoice=="paper"&& computerChoice=="rock")||
+(playerChoice=="scissors"&& computerChoice=="paper")
+              )
+              {
+     playerScore++;
+ document.getElementById("playerScore").innerHTML=playerScore;
+ document.getElementById("result").innerHTML="you win!";
+            }
+            else
+            {
+                computerScore++;
+            document.getElementById("computerScore").innerHTML=computerScore;
+            document.getElementById("result").innerHTML="computer wins!";
+            }
+            round++;
+               if(round === 5){
+                alert("Game Over!");
+                location.reload();
+               }
+          }
+            
+
+           
+        </script>
+
+    </body>
+</html>
